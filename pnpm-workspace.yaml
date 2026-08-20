@@ -6,6 +6,7 @@ overrides:
   shell-quote: 1.10.0
   cross-spawn: 6.0.6
   rollup: 4.62.4
+  esbuild: 0.28.2
 
 allowBuilds:
   esbuild: true

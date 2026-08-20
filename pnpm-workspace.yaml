@@ -1,0 +1,13 @@
+# pnpm settings (pnpm >= 10 keeps config in this file)
+overrides:
+  adm-zip: 0.6.0
+  tmp: 0.2.7
+  uuid: 11.1.1
+  shell-quote: 1.10.0
+  cross-spawn: 6.0.6
+  rollup: 4.62.4
+
+allowBuilds:
+  esbuild: true
+  husky: false
+  spawn-sync: false

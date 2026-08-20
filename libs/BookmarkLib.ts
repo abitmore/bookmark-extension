@@ -102,10 +102,10 @@ export function getBookmark(): Bookmark | null {
  */
 export function removeBookmark(
   bm: Bookmark,
-  cb?: (result: chrome.bookmarks.BookmarkTreeNode) => void
+  cb?: () => void
 ): void {
   if (bm.id) {
-    chrome.bookmarks.remove(bm.id, cb);
+    chrome.bookmarks.remove(bm.id, () => cb?.());
   }
 }
 
@@ -370,7 +370,7 @@ export function createBookmark(
   data: chrome.bookmarks.CreateDetails,
   cb?: (result: chrome.bookmarks.BookmarkTreeNode) => void
 ): void {
-  chrome.bookmarks.create(data, cb);
+  chrome.bookmarks.create(data, (result) => cb?.(result));
 }
 
 /**
